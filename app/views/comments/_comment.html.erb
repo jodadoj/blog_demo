@@ -1,5 +1,7 @@
-<p>
-    <strong> Commenter: </strong>
-    <%= comment.commenter %>
-    <%= comment.comment %>
-</p>
+<% unless comment.archived? %>
+    <p>
+        <strong> Commenter: </strong>
+        <%= comment.commenter %>
+        <%= comment.comment %>
+    </p>
+<% end %>
